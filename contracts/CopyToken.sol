@@ -21,7 +21,7 @@ contract CopyToken is ERC20Capped, ERC20Burnable {
         if (from == address(0)) {
             uint256 maxSupply = cap();
             uint256 supply = totalSupply();
-            if (supply > maxSupply) {
+            if (supply > maxSupply) { 
                 revert ERC20ExceededCap(supply, maxSupply);
             }
         }
